@@ -8,12 +8,11 @@ describe('pigLatin', function() {
 	});
 
 	it('For words that start with one or more consonants, move all of the first consecutive consonants to the end and add "ay"', function() {
-		pigLatin("test")[0].should.equal("Esttay")
+		pigLatin("threat")[0].should.equal("Eatthray")
 	});
 
-	it('for words that start with one or more consonants, moves all of the first consecutive consonants to the end and add "ay". (If the first consonants include "qu", move the "u" along with the "q". Don\'t forget about words like "squeal" where the "qu" doesn\'t come first!)', function() {
+	it('moves the "u" along with the "q". Don\'t forget about words like "squeal" where the "qu" doesn\'t come first!)', function() {
 		// pigLatin("square")[0].should.equal("Aresquay")
 		pigLatin("quantum")[0].should.equal("Antumquay");
-		pigLatin("the")[0].should.equal("Ethay");
 	});
 });
